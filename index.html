@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Prevents zooming on mobile and Messenger browser -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Haier Pro</title>
+
+        <link rel="stylesheet" href="flappybird.css">
+        <script src="flappybird.js" defer></script>
+    </head>
+
+    <body>
+        <canvas id="board"></canvas>
+        
+        <!-- Floatbox -->
+        <div id="floatbox" class="floatbox">
+            <div class="floatbox-header">
+                <h3>Haier Pro Game</h3>
+                <button id="toggleFloatbox" class="toggle-btn">−</button>
+            </div>
+            <div class="floatbox-content">
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Current Score:</span>
+                        <span id="currentScore" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">High Score:</span>
+                        <span id="highScoreDisplay" class="stat-value">0</span>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button id="pauseBtn" class="control-btn">Pause</button>
+                    <button id="restartBtn" class="control-btn">Restart</button>
+                    <button id="soundBtn" class="control-btn">Sound: ON</button>
+                </div>
+                <div class="game-info">
+                    <p><strong>Controls:</strong></p>
+                    <p>• Space/Arrow Up/X - Jump</p>
+                    <p>• Tap/Click - Jump</p>
+                    <p>• Tap when game over - Restart</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Music -->
+        <audio id="backgroundMusic" autoplay loop muted>
+            <source src="sound/Theme For FlappyBird - Original Track.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Jump Sound Effect -->
+        <audio id="jumpSound" preload="auto">
+            <source src="sound/SFX_ Swooshing -  Flappy Bird.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Point Sound Effect -->
+        <audio id="pointSound" preload="auto">
+            <source src="sound/sfx_point.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Die Sound Effect -->
+        <audio id="dieSound" preload="auto">
+            <source src="sound/SFX_ Die - Flappy Bird.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+
+    </body>
+</html>
